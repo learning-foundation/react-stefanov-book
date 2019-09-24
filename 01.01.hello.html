@@ -14,8 +14,12 @@
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
         <script>
+            // Sintax: ReactDOM.render(content, element);
+            // Sintax: React.createElement(tag, [attributes], content)
+            // Note 1:class and for attributes are reserved world, use className and htmlFor instead
+            // Note 2: style attribute accept only javascript api objects
             ReactDOM.render(
-                React.createElement("h1", null, "Hello World!"),
+                React.createElement("h1", { id: "my-heading", className: "heading", style: { fontFamily: "Verdana" } }, "Hello World!"),
                 document.getElementById("app")
             );  
         </script>
